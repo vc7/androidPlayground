@@ -4,6 +4,8 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
@@ -22,10 +24,17 @@ public class MainActivity extends AppCompatActivity {
 
         this.listView = (ListView) findViewById(R.id.listView);
         String[] mNames = new String[10];
-        for (int i = 0; i <= 10; i++) {
+        for (int i = 0; i < 10; i++) {
             mNames[i] = "index: " + i;
         }
         ListAdapter mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mNames);
         this.listView.setAdapter(mAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return true;
     }
 }

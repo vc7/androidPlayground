@@ -8,11 +8,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.vc7.buttonapp.MainActivity">
-
+    <menu xmlns:android="http://schemas.android.com/apk/res/android" >
+        <item
+            android:title="add"
+            />
+    </menu>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:id="@+id/listView"
-        ></ListView>
+        />
 </LinearLayout>
